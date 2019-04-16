@@ -2,7 +2,7 @@ import java.io.File;
 
 public class FilenameFilter {
     public String[] getFilenames (){
-        File dir = new File("/home/wen/projects/study/demo2/src");
+        File dir = new File("./src");
         // System.out.println(dir.list());
         // String[] filelist = dir.list(new java.io.FilenameFilter() {
         //     @Override
