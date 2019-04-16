@@ -14,13 +14,15 @@ public class Rectangle extends Shape{
         return h;
     }
 
-    @Override
     public double area(){
         return w * h;
     }
 
-    @Override
     public double circumference() {
         return 2 * (w + h);
+    }
+
+    public boolean isInside(double x, double y){
+       return true;
     }
 }

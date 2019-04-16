@@ -30,5 +30,9 @@ public class Circle extends Shape {
     public double circumference(){
         return PI * 2 * this.r;
     }
+
+    public boolean isInside(double x, double y){
+        return true;
+    }
 }
 
