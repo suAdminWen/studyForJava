@@ -57,6 +57,9 @@ public class HelloWorld {
         System.out.println(rectangle.area());
         System.out.println(PrimaryColor.RED);
 
+        FilenameFilter filenameFilter = new FilenameFilter();
+        System.out.println(filenameFilter.getFilenames());
+
     }
 
     public enum PrimaryColor{
