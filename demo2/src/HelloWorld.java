@@ -1,5 +1,18 @@
-import java.util.ArrayList;
-import java.util.List;
+import t1.Burrito;
+import t1.Guacamole;
+import t1.SuperBurrito;
+import t2.Circle;
+import t2.PlaneCircle;
+import t2.Rectangle;
+import t2.Shape;
+import t3.Singleton;
+import t4.ShowCollection;
+import t4.ShowList;
+import t4.ShowMap;
+import t4.ShowSet;
+import t5.BirthdayDiary;
+
+import java.util.*;
 
 public class HelloWorld {
     public static void main(String[] args){
@@ -23,6 +36,20 @@ public class HelloWorld {
         if (hello1 == hello2) System.out.println("equal");
         // equals 比较是否值是否相等
         if (hello1.equals(hello2)) System.out.println("equal");
+
+        // 枚举和switch语句
+        PrimaryColor primaryColor = PrimaryColor.BLUE;
+        switch (primaryColor){
+            case RED:
+                System.out.println("RED");
+                break;
+            case BLUE:
+                System.out.println("BLUE");
+                break;
+            default:
+                System.out.println("GREEN");
+                break;
+        }
 
         // 对象的操作
         Circle circle = new Circle(3.1);
@@ -57,8 +84,27 @@ public class HelloWorld {
         System.out.println(rectangle.area());
         System.out.println(PrimaryColor.RED);
 
-        FilenameFilter filenameFilter = new FilenameFilter();
-        System.out.println(filenameFilter.getFilenames());
+        // Java面向对象：合成
+        Burrito lunch = new Guacamole(new SuperBurrito(), 3);
+        System.out.println(lunch.getPrice());
+
+        // 单例
+        Singleton singleton1 = Singleton.getInstance();
+        Singleton singleton2 = Singleton.getInstance();
+        System.out.println(singleton1.hashCode());
+        System.out.println(singleton2.hashCode());
+
+        ShowCollection.show();
+        ShowSet.show();
+        ShowList.show();
+        ShowMap.show();
+
+        // Java的日期和时间
+        BirthdayDiary birthdayDiary = new BirthdayDiary();
+        System.out.println(birthdayDiary
+                .addBirthday("王志文", 27, 11, 1994));
+        System.out.println(birthdayDiary.getAgeInYear("王志文", 2019));
+        System.out.println(birthdayDiary.getBirthdaysInNextMonth());
 
     }
 

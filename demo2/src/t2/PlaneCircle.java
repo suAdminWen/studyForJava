@@ -1,3 +1,5 @@
+package t2;
+
 interface Centered {
     double getCenterX();
     double getCenterY();

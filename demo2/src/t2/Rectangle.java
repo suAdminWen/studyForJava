@@ -1,4 +1,6 @@
-public class Rectangle extends Shape{
+package t2;
+
+public class Rectangle extends Shape {
     // 抽象类的具体子类
 
     protected double w, h;

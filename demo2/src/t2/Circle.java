@@ -1,7 +1,9 @@
+package t2;
+
 import java.awt.image.CropImageFilter;
 public class Circle extends Shape {
     public static final double PI = 3.14159;
-    protected double r;
+    public double r;
 
     public Circle(double r) {
         // 构造函数

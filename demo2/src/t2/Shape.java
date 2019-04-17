@@ -1,3 +1,5 @@
+package t2;
+
 // 这是一个简单的接口
 interface InterfaceShape{
     void setSize(double width, double height);
